@@ -52,8 +52,9 @@ Vue.use(require('@websanova/vue-auth'), {
   },
   http: require('@websanova/vue-auth/drivers/http/axios.1.x.js'),
   router: require('@websanova/vue-auth/drivers/router/vue-router.2.x.js'),
-  fetchData: {url: '/users/me', method: 'GET', enabled: true},
-  refreshData: {url: 'auth/refresh', method: 'GET', enabled: false},
+  loginData: {url: '/api/auth/login', method: 'POST', redirect: '/'},
+  fetchData: {url: '/api/user/me'},
+  refreshData: {enabled: false},
   tokenName: 'token',
   rolesVar: 'role',
   parseUserData: function (data) {
