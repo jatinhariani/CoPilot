@@ -1,5 +1,5 @@
 export default {
-  serverURI: 'http://localhost:8080',
+  serverURI: process.env.API_URL,
   fixedLayout: false,
   hideLogoOnMobile: false
 }
